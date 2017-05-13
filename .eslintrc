@@ -1,0 +1,22 @@
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb-base",
+  "root": true,
+  "rules": {
+    "strict": 0,
+    "no-unused-vars": ["warn", {
+      "varsIgnorePattern": "React",
+      "ignoreRestSiblings": false
+      }],
+    "semi": ["error", "never"],
+    "no-confusing-arrow": "off",
+    "comma-dangle": ["error", {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "never"
+    }],
+    "operator-linebreak": ["error", "after", { "overrides": { "?": "before", ":": "before" } }]
+  }
+}

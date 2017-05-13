@@ -1,0 +1,42 @@
+{
+  "name": "babel-plugin-styled-name",
+  "version": "1.0.2",
+  "description": "Add displayName for styled-components",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel src --out-dir lib",
+    "test": "npm run lint && npm run tests-only",
+    "tests-only": "mocha",
+    "lint": "eslint src",
+    "prepublish": "npm run test && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lestad/babel-plugin-styled-name.git"
+  },
+  "keywords": [
+    "babel",
+    "plugin",
+    "dynamic",
+    "import",
+    "require",
+    "async"
+  ],
+  "author": "Sergey Sova <i.am@lestad.net> (https://lestad.top)",
+  "license": "MIT",
+  "dependencies": {
+    "babel-types": "^6.19.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.18.2",
+    "babel-eslint": "^7.1.1",
+    "babel-plugin-transform-es2015-arrow-functions": "^6.8.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.18.0",
+    "chai": "^3.5.0",
+    "eslint": "^3.11.1",
+    "eslint-config-airbnb-base": "^10.0.1",
+    "eslint-plugin-import": "^2.2.0",
+    "mocha": "^3.2.0"
+  }
+}

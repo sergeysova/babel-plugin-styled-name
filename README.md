@@ -10,23 +10,29 @@ $ npm install babel-plugin-styled-name --save-dev
 
 ## Example
 
-In:
+> Improve readability in devTools
+
+![Before](/images/before.png)
+
+&nbsp; ↓
+
+![After](/images/after.png)
+
+
+### How?
+
 
 ```js
 const Button = styled.button`
   color: red;
 `
 ```
-
-Out:
-
+&nbsp; ↓
 ```js
 const Button = styled.button.withConfig({ displayName: 'Button', componentId: 'Button' })`
   color: red;
 `
 ```
-
-> Improve readability in devTools
 
 
 ## Usage

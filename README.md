@@ -1,6 +1,6 @@
 # babel-plugin-styled-name
 
-Add displayName for styled-components.
+Add `displayName` and `componentId` for styled-components.
 
 ## Installation
 
@@ -16,38 +16,22 @@ In:
 const Button = styled.button`
   color: red;
 `
-
-const BorderedButton = styled(Button)`
-  border: 1px solid black;
-`
-
-export const GrayBorderedButton = styled(BorderedButton)`
-  background-color: gray;
-`
 ```
 
 Out:
 
 ```js
-const Button = styled.button`
+const Button = styled.button.withConfig({ displayName: 'Button', componentId: 'Button' })`
   color: red;
 `
-Button.displayName = 'Button'
-
-
-const BorderedButton = styled(Button)`
-  border: 1px solid black;
-`
-BorderedButton.displayName = 'BorderedButton'
-
-export const GrayBorderedButton = styled(BorderedButton)`
-  background-color: gray;
-`
-GrayBorderedButton.displayName = 'GrayBorderedButton'
 ```
+
+> Improve readability in devTools
 
 
 ## Usage
+
+Use only for development!
 
 ### Via `.babelrc` (Recommended)
 
@@ -55,7 +39,11 @@ GrayBorderedButton.displayName = 'GrayBorderedButton'
 
 ```json
 {
-  "plugins": ["styled-name"]
+  "env": {
+    "development": {
+      "plugins": ["styled-name"]
+    }
+  }
 }
 ```
 

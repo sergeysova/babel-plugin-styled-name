@@ -1,7 +1,7 @@
 {
   "name": "babel-plugin-styled-name",
   "version": "1.0.0",
-  "description": "Add displayName for styled-components",
+  "description": "Improve readability of styled-components in devTools",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel src --out-dir lib",
@@ -18,25 +18,26 @@
     "babel",
     "plugin",
     "dynamic",
-    "import",
-    "require",
-    "async"
+    "styled",
+    "components",
+    "react"
   ],
-  "author": "Sergey Sova <i.am@lestad.net> (https://lestad.top)",
+  "author": "Sergey Sova <mail@sergeysova.com> (https://sergeysova.com)",
   "license": "MIT",
   "dependencies": {
     "babel-types": "^6.19.0"
   },
   "devDependencies": {
+    "@atomix/eslint-config": "^6.4.0",
     "babel-cli": "^6.18.0",
     "babel-core": "^6.18.2",
-    "babel-eslint": "^7.1.1",
+    "babel-eslint": "^8.2.3",
     "babel-plugin-transform-es2015-arrow-functions": "^6.8.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.18.0",
-    "chai": "^3.5.0",
-    "eslint": "^3.11.1",
+    "chai": "^4.1.2",
+    "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^10.0.1",
     "eslint-plugin-import": "^2.2.0",
-    "mocha": "^3.2.0"
+    "mocha": "^5.1.1"
   }
 }

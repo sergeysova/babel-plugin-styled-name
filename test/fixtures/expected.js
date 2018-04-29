@@ -1,9 +1,18 @@
-const Foo = styled.div`color:black`;
-Foo.displayName = "Foo";
-const Bar = styled(Foo)`display:block`;
-Bar.displayName = "Bar";
-export const Baz = styled.button`padding:20px;`;
-Baz.displayName = "Baz";
+const Foo = styled.div.withConfig({
+  displayName: "Foo",
+  componentId: "Foo"
+})`color:black`;
+const Bar = styled(Foo).withConfig({
+  displayName: "Bar",
+  componentId: "Bar"
+})`display:block`;
+export const Baz = styled.button.withConfig({
+  displayName: "Baz",
+  componentId: "Baz"
+})`padding:20px;`;
 () => {
-  const Demo = styled.aside`cursor:default;`;Demo.displayName = "Demo";
+  const Demo = styled.aside.withConfig({
+    displayName: "Demo",
+    componentId: "Demo"
+  })`cursor:default;`;
 };

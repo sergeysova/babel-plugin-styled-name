@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-styled-name",
-  "version": "2.0.0-0",
+  "version": "2.0.0-1",
   "description": "Improve readability of styled-components in devTools",
   "main": "lib/index.js",
   "scripts": {
